@@ -1,111 +1,49 @@
-import React from "react"
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafael Maritime Knowledge Factory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-export default function App() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+<header class="hero">
+  <h1>RAFAEL MARITIME KNOWLEDGE FACTORY</h1>
+  <p>Pusat produksi ebook, modul, dan kurikulum maritim berbasis industri.</p>
+  <div class="hero-btn">
+    <button onclick="alert('Masuk ruang produksi')">Masuk Pabrik</button>
+    <button onclick="alert('Menuju katalog')">Lihat Katalog</button>
+  </div>
+</header>
 
-      {/* HERO */}
-      <section className="px-6 py-20 text-center max-w-5xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold tracking-tight"
-        >
-          RAFAEL MARITIME KNOWLEDGE FACTORY
-        </motion.h1>
+<section class="values">
+  <div class="card">⚓ Karier & Industri Pelaut</div>
+  <div class="card">🧠 Ketahanan Mental & Karakter</div>
+  <div class="card">🚢 Maritime 5.0 & Masa Depan</div>
+</section>
 
-        <p className="mt-6 text-slate-300 text-lg md:text-xl">
-          Pusat produksi ebook, modul, dan kurikulum maritim berbasis industri
-          untuk membangun pelaut Indonesia yang siap mental, karier, dan teknologi.
-        </p>
+<section class="system">
+  <h2>Sistem Produksi</h2>
+  <ul>
+    <li>Intellectual Product Seed Pool (98 Judul)</li>
+    <li>Title Lock Module</li>
+    <li>AI Production Engine</li>
+    <li>Quality Control System</li>
+    <li>Ebook → Modul → Course → Akademi</li>
+  </ul>
+</section>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <Button className="rounded-2xl px-6 py-5 text-base">
-            Masuk Pabrik
-          </Button>
-          <Button variant="outline" className="rounded-2xl px-6 py-5 text-base">
-            Lihat Katalog Produk
-          </Button>
-        </div>
-      </section>
+<section class="panel">
+  <h2>Production Control Panel</h2>
+  <div class="panel-box">Mental Pelaut — Draft</div>
+  <div class="panel-box">Karier & Sertifikasi — Produksi</div>
+  <div class="panel-box">Teknologi Maritim — Siap Rilis</div>
+</section>
 
-      {/* VALUE */}
-      <section className="px-6 py-16 bg-slate-900/40">
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {[
-            "Karier & Industri Pelaut",
-            "Ketahanan Mental & Karakter",
-            "Maritime 5.0 & Masa Depan",
-          ].map((v, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <Card className="bg-slate-950 border-slate-800 rounded-2xl shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{v}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    Setiap produk dibangun dari realita lapangan, kebutuhan industri,
-                    dan arah masa depan maritim.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+<footer>
+  © 2026 Rafael Maritime Knowledge Factory — Disusun dan dikembangkan oleh Rafael Sukirno, CE.
+</footer>
 
-      {/* SYSTEM */}
-      <section className="px-6 py-20 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Sistem Produksi</h2>
-
-        <ul className="grid md:grid-cols-2 gap-3 text-slate-300 list-disc list-inside">
-          <li>Intellectual Product Seed Pool (98 Judul)</li>
-          <li>Title Lock Module</li>
-          <li>AI Production Engine</li>
-          <li>Quality Control & Barrier System</li>
-          <li>Ebook → Modul → Course → Akademi</li>
-        </ul>
-
-        {/* CONTROL PANEL MOCK */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-semibold mb-4">
-            Production Control Panel
-          </h3>
-          <p className="text-slate-400 mb-6">
-            Panel untuk memilih judul, memantau produksi, dan mengelola pipeline produk.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {["Mental Pelaut", "Karier & Sertifikasi", "Teknologi Maritim"].map(
-              (p, i) => (
-                <Card
-                  key={i}
-                  className="bg-slate-950 border-slate-800 rounded-2xl"
-                >
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold text-lg">{p}</h4>
-                    <p className="mt-2 text-sm text-slate-400">
-                      Status: Draft → Produksi → Siap Rilis
-                    </p>
-                  </CardContent>
-                </Card>
-              )
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
-        © 2026 Rafael Maritime Knowledge Factory — Disusun dan dikembangkan oleh
-        Rafael Sukirno, CE.
-      </footer>
-    </div>
-  )
-}
+<script src="script.js"></script>
+</body>
+</html>
