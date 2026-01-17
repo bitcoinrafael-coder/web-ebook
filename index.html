@@ -1,0 +1,241 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      {/* HERO */}
+      <section className="bg-gradient-to-br from-blue-900 to-slate-800 text-white p-10">
+        <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} className="text-4xl md:text-5xl font-bold max-w-4xl">
+          RAFAEL MARITIME KNOWLEDGE FACTORY
+        </motion.h1>
+        <p className="mt-4 max-w-3xl text-lg">Pusat produksi ebook, modul, dan kurikulum maritim berbasis industri untuk membangun pelaut Indonesia yang siap mental, karier, dan teknologi.</p>
+        <div className="mt-6 flex gap-4">
+          <Button className="rounded-2xl">Masuk Pabrik</Button>
+          <Button variant="outline" className="rounded-2xl">Lihat Katalog Produk</Button>
+        </div>
+      </section>
+
+      {/* VALUE */}
+      <section className="p-10 grid md:grid-cols-3 gap-6">
+        {["Karier & Industri Pelaut","Ketahanan Mental & Karakter","Maritime 5.0 & Masa Depan"].map((v,i)=>(
+          <Card key={i} className="rounded-2xl shadow">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">{v}</h3>
+              <p>Setiap produk dibangun berbasis realita lapangan, kebutuhan industri, dan arah masa depan maritim.</p>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+
+      {/* SYSTEM */}
+      <section className="bg-white p-10">
+        <h2 className="text-3xl font-bold mb-6">Sistem Produksi</h2>
+        <ul className="grid md:grid-cols-2 gap-4">
+          <li>• Intellectual Product Seed Pool (98 Judul)</li>
+          <li>• Title Lock Module</li>
+          <li>• AI Production Engine</li>
+          <li>• Quality Control & Barrier System</li>
+          <li>• Ebook → Modul → Course → Akademi</li>
+        </ul>
+      </section>
+
+      {/* CONTROL PANEL MOCK */}
+      <section className="p-10 bg-slate-100">
+        <h2 className="text-3xl font-bold mb-4">Production Control Panel</h2>
+        <p className="mb-6">Panel untuk memilih judul, memantau produksi, dan mengelola pipeline produk.</p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {["Mental Pelaut","Karier & Sertifikasi","Teknologi Maritim"].map((p,i)=>(
+            <Card key={i} className="rounded-2xl">
+              <CardContent className="p-6">
+                <h4 className="font-semibold">{p}</h4>
+                <p className="text-sm mt-2">Status: Draft → Produksi → Siap Rilis</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="p-6 text-center text-sm bg-slate-900 text-white">
+        © 2026 Rafael Maritime Knowledge Factory — Disusun dan dikembangkan oleh Rafael Sukirno, CE.
+      </footer>
+    </div>
+  );
+}
+
+
+# 🔱 RAFAEL RAJA EBOOK FACTORY – WEBSITE & PROMPT SYSTEM
+
+## A. TAMBAHAN PROMPT #1 (PROTOKOL PRODUKSI ISI)
+Tambahan aturan wajib untuk Prompt #1:
+- ❌ **Hindari penggunaan kata jembatan dan kata kunci yang berulang-ulang** (misal: "selain itu", "oleh karena itu", "pada akhirnya", "di sisi lain", dll).
+- Gunakan variasi struktur kalimat alami seperti penulis profesional.
+- Fokus pada **alur logis, narasi kuat, dan konsistensi makna**, bukan pengulangan frasa.
+- Setiap bab wajib memiliki: *konsep utama jelas, contoh konkret, dan penutup bermakna*.
+
+Contoh tambahan di Prompt #1 (siap copas):
+```
+ATURAN BAHASA WAJIB:
+- Jangan sering menggunakan kata jembatan klise atau kata kunci berulang.
+- Variasikan struktur kalimat seperti buku premium.
+- Dilarang mengulang frasa pembuka atau penutup yang sama.
+- Utamakan kedalaman makna, bukan pengulangan kata.
+```
+
+---
+
+## B. ARSITEKTUR WEBSITE PRODUKSI (FACTORY-STYLE)
+
+### Alur Sistem:
+Dashboard  → Prompt #1 (Master Writing Protocol)
+→ Prompt #2 (Chapter Builder Engine)
+→ Database 98 Judul & Subjudul
+→ Ebook Generator (Bab → Editing → Final)
+→ Cover Generator (AI Image Prompt)
+→ Video Promo Generator (AI Video Prompt)
+→ Publish & Marketing Hub (LYNK.ID)
+
+---
+
+## C. STRUKTUR HALAMAN WEBSITE
+
+1. **Dashboard Utama**
+   - Statistik produksi (judul aktif, ebook selesai, antrian)
+   - Tombol: Start Production, Prompt Control, Cover Lab, Video Lab, LYNK Hub
+
+2. **Prompt #1 Page – Master Protocol**
+   - Editor Prompt Utama
+   - Lock system (tidak berubah kecuali admin)
+   - Tombol: Simpan → Terapkan ke semua produksi
+
+3. **Prompt #2 Page – Chapter Engine**
+   - Template perintah BAB
+   - Auto-format: "Tulis BAB [NOMOR]: [JUDUL RESMI]"
+   - Log kepatuhan bab
+
+4. **Database 98 Judul Ebook**
+   - Tabel: AI | ID | Judul | Subjudul | Kategori | Status
+   - Tombol: Produce, Preview, Edit, Archive
+
+5. **Ebook Production Room**
+   - Progress bar per buku
+   - Panel bab
+   - Export: PDF, DOCX, EPUB
+
+6. **Cover Factory**
+   - Input: Judul, Subjudul, Tema visual
+   - Output: prompt siap pakai Midjourney / Leonardo / DALL‑E
+
+7. **Video Promotion Factory**
+   - Input: Judul, hook, target audiens
+   - Output: prompt video AI (Runway / Pika / Sora style)
+
+8. **LYNK.ID Marketing Hub**
+   - Auto‑generate:
+     - Deskripsi produk
+     - Copywriting bio
+     - CTA
+
+---
+
+## D. STRUKTUR CODING WEBSITE (REACT + GITHUB READY)
+
+### Folder Structure
+```
+rafael-ebook-factory/
+│
+├── public/
+├── src/
+│   ├── data/
+│   │   └── ebooks.js
+│   ├── prompts/
+│   │   ├── prompt1.js
+│   │   └── prompt2.js
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Prompt1.jsx
+│   │   ├── Prompt2.jsx
+│   │   ├── Library.jsx
+│   │   ├── Production.jsx
+│   │   ├── CoverFactory.jsx
+│   │   ├── VideoFactory.jsx
+│   │   └── LynkHub.jsx
+│   ├── components/
+│   │   ├── EbookTable.jsx
+│   │   ├── ProgressBar.jsx
+│   │   └── SideMenu.jsx
+│   ├── App.jsx
+│   └── main.jsx
+```
+
+---
+
+## E. CONTOH FILE INTI
+
+### src/data/ebooks.js
+```javascript
+export const ebooks = [
+  { id: 1, ai: "DOLA", title: "Mengatasi Stres dan Burnout di Kapal", subtitle: "Strategi Praktis dan Terbukti untuk Menjaga Kesehatan Mental", category: "Kesehatan Mental" },
+  { id: 2, ai: "DOLA", title: "Panduan Lengkap Engine Room", subtitle: "Kesalahan Fatal yang Harus Dihindari Pelaut Baru", category: "Keterampilan Teknis" },
+  // ... lanjutkan sampai 98 (semua judul kamu masukkan di sini)
+]
+```
+
+### src/pages/Library.jsx
+```javascript
+import { ebooks } from "../data/ebooks";
+
+export default function Library(){
+  return (
+    <div>
+      <h1>Ebook Production Library</h1>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>AI</th><th>Judul</th><th>Subjudul</th><th>Kategori</th><th>Aksi</th></tr>
+        </thead>
+        <tbody>
+          {ebooks.map(e => (
+            <tr key={e.id}>
+              <td>{e.id}</td>
+              <td>{e.ai}</td>
+              <td>{e.title}</td>
+              <td>{e.subtitle}</td>
+              <td>{e.category}</td>
+              <td><button>Produce</button></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+```
+
+---
+
+## F. COVER FACTORY – TEMPLATE PROMPT
+"Buat cover ebook premium rasio 2:3, judul: {JUDUL}, subjudul: {SUBJUDUL}. Tema maritim profesional, sinematik, realistis, pencahayaan dramatis, tipografi modern, layak toko buku internasional."
+
+---
+
+## G. VIDEO PROMOTION FACTORY – TEMPLATE PROMPT
+"Buat video promosi 30–45 detik bergaya cinematic documentary tentang ebook berjudul {JUDUL}. Target audiens pelaut dan taruna. Tampilkan emosi, tekanan laut, profesionalisme, dan harapan. Sertakan teks hook dan ending CTA."
+
+---
+
+## H. LYNK.ID OUTPUT SYSTEM
+Auto‑generate:
+- Deskripsi produk
+- Headline bio
+- CTA
+- Bundle campaign
+
+Contoh CTA:
+"📘 Ebook wajib pelaut modern. Bangun mental, skill, dan masa depan. Download sekarang."
+
+---
+
+Dokumen ini adalah blueprint inti WEBSITE PABRIK EBOOK RAFAEL.
